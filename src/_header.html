@@ -1,9 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ttps://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-6">
+                    <div class="row g-0">
+                        <div class="col-9">
+                            <div class="logo">
+                                <a href="/"><img src="./img/logo.png" alt="" class="w-100"></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-9 col-6 d-flex align-items-center g-3 justify-content-end">
+                    <a href="tel:+380971373739" class="d-md-none">
+                        <div class="btn-primary-mob">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4395 18.25C13.677 18.25 12.6059 17.9742 11.002 17.0781C9.05163 15.9844 7.54304 14.9746 5.60319 13.0398C3.73288 11.1707 2.82273 9.96055 1.5489 7.64258C0.109836 5.02539 0.355148 3.65352 0.629367 3.06719C0.95593 2.36641 1.43796 1.94727 2.06101 1.53125C2.41489 1.29939 2.78939 1.10064 3.17976 0.937504C3.21882 0.920707 3.25515 0.904691 3.28757 0.890238C3.48093 0.803129 3.7739 0.671488 4.14499 0.812113C4.39265 0.905082 4.61374 1.09532 4.95984 1.43711C5.6696 2.13711 6.63952 3.6961 6.99734 4.46172C7.23757 4.97774 7.39655 5.31836 7.39695 5.70039C7.39695 6.14766 7.17195 6.49258 6.8989 6.86485C6.84773 6.93477 6.79695 7.00157 6.74773 7.06641C6.45046 7.45704 6.38523 7.56993 6.42819 7.77149C6.5153 8.17657 7.16491 9.38243 8.23249 10.4477C9.30007 11.5129 10.4712 12.1215 10.8778 12.2082C11.088 12.2531 11.2032 12.1852 11.6063 11.8773C11.6641 11.8332 11.7235 11.7875 11.7856 11.7418C12.202 11.432 12.5309 11.2129 12.9676 11.2129H12.97C13.3501 11.2129 13.6755 11.3777 14.2145 11.6496C14.9176 12.0043 16.5235 12.9617 17.2278 13.6723C17.5704 14.0176 17.7614 14.2379 17.8548 14.4852C17.9954 14.8574 17.863 15.1492 17.7766 15.3445C17.7622 15.377 17.7462 15.4125 17.7294 15.452C17.5649 15.8416 17.365 16.2153 17.1321 16.5684C16.7169 17.1895 16.2962 17.6703 15.5938 17.9973C15.2332 18.1679 14.8385 18.2543 14.4395 18.25Z" fill="white"/>
+                                </svg>
+                                
+                        </div>
+                            
+                    </a>
+                    <nav class="navbar navbar-expand-lg position-inital">
+                        <div class="container-fluid d-flex w-100 justify-content-between">
+
+                            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="burger">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.33333 15.5H16.6667C17.125 15.5 17.5 15.125 17.5 14.6667C17.5 14.2083 17.125 13.8333 16.6667 13.8333H3.33333C2.875 13.8333 2.5 14.2083 2.5 14.6667C2.5 15.125 2.875 15.5 3.33333 15.5ZM3.33333 11.3333H16.6667C17.125 11.3333 17.5 10.9583 17.5 10.5C17.5 10.0417 17.125 9.66667 16.6667 9.66667H3.33333C2.875 9.66667 2.5 10.0417 2.5 10.5C2.5 10.9583 2.875 11.3333 3.33333 11.3333ZM2.5 6.33333C2.5 6.79167 2.875 7.16667 3.33333 7.16667H16.6667C17.125 7.16667 17.5 6.79167 17.5 6.33333C17.5 5.875 17.125 5.5 16.6667 5.5H3.33333C2.875 5.5 2.5 5.875 2.5 6.33333Z" fill="white"/>
+                                        </svg>
+                                        
+                                </span>
+                            </button>
+
+                            <div class="collapse navbar-collapse justify-content-between align-items-center"
+                                id="navbarSupportedContent">
+
+                                <ul class="navbar-nav mb-2 mb-lg-0 text-white gap-4 me-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Головна</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Послуги</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Прайс</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Вакансії</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Контакти</a>
+                                    </li>
+                                </ul>
+                                <a href="tel:+380971373739" class="d-none d-lg-block me-4">
+                                    <div class="btn-primary">
+                                        <div class="icon">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.1573 17.75C13.3948 17.75 12.3237 17.4742 10.7198 16.5781C8.76941 15.4844 7.26081 14.4746 5.32097 12.5398C3.45066 10.6707 2.5405 9.46055 1.26667 7.14258C-0.172391 4.52539 0.0729218 3.15352 0.347141 2.56719C0.673703 1.86641 1.15573 1.44727 1.77878 1.03125C2.13267 0.799393 2.50717 0.600636 2.89753 0.437504C2.93659 0.420707 2.97292 0.404691 3.00534 0.390238C3.1987 0.303129 3.49167 0.171488 3.86277 0.312113C4.11042 0.405082 4.33152 0.595316 4.67761 0.937113C5.38738 1.63711 6.3573 3.1961 6.71511 3.96172C6.95534 4.47774 7.11433 4.81836 7.11472 5.20039C7.11472 5.64766 6.88972 5.99258 6.61667 6.36485C6.5655 6.43477 6.51472 6.50157 6.4655 6.56641C6.16823 6.95704 6.103 7.06993 6.14597 7.27149C6.23308 7.67657 6.88269 8.88243 7.95027 9.94766C9.01784 11.0129 10.1889 11.6215 10.5956 11.7082C10.8057 11.7531 10.921 11.6852 11.3241 11.3773C11.3819 11.3332 11.4413 11.2875 11.5034 11.2418C11.9198 10.932 12.2487 10.7129 12.6854 10.7129H12.6878C13.0678 10.7129 13.3932 10.8777 13.9323 11.1496C14.6354 11.5043 16.2413 12.4617 16.9456 13.1723C17.2882 13.5176 17.4792 13.7379 17.5725 13.9852C17.7132 14.3574 17.5807 14.6492 17.4944 14.8445C17.48 14.877 17.4639 14.9125 17.4471 14.952C17.2827 15.3416 17.0828 15.7153 16.8499 16.0684C16.4346 16.6895 16.0139 17.1703 15.3116 17.4973C14.9509 17.6679 14.5562 17.7543 14.1573 17.75Z"
+                                                    fill="white" />
+                                            </svg>
+
+                                        </div>
+                                        Дзвінок
+                                    </div>
+                                </a>
+                                <div class="lang d-flex justify-content-center align-items-center">
+                                    <div class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.0016 21.6395C13.9792 21.6392 15.9124 21.0525 17.5567 19.9536C19.2009 18.8546 20.4824 17.2928 21.2391 15.4656C21.9958 13.6384 22.1937 11.6279 21.8078 9.68824C21.4219 7.74858 20.4695 5.96689 19.0711 4.56846C17.6726 3.17003 15.8909 2.21766 13.9513 1.83175C12.0116 1.44585 10.0011 1.64375 8.17389 2.40044C6.34669 3.15712 4.78489 4.4386 3.68596 6.08285C2.58702 7.7271 2.00031 9.66028 2 11.638C1.99979 12.9514 2.25835 14.2521 2.7609 15.4656C3.26346 16.6792 4.00016 17.7818 4.92893 18.7106C5.8577 19.6394 6.96035 20.3761 8.17389 20.8786C9.38743 21.3812 10.6881 21.6397 12.0016 21.6395V21.6395Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M2.50195 14.7752H21.2157" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M2.50195 8.5007H21.2157" stroke="white" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.84343 1.87329C8.04858 8.34927 8.31282 15.2232 10.5995 21.5423"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M14.1566 1.87329C14.9407 4.69158 15.3365 7.60367 15.3331 10.529C15.341 14.284 14.6912 18.0115 13.4131 21.5423"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+
+                                    </div>
+                                    <div class="lang bold text-white ms-2">UA</div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+            </div>
+        </div>
+    </header>

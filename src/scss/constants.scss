@@ -1,0 +1,171 @@
+$base-font: "Roboto", sans-serif;
+$header-font: "IBM Plex Mono", monospace;
+
+$black: #242B35;
+$grey-dark: #57606E;
+$grey-light: #BDBFC2;
+$white: #FFFFFF;
+$gold: #A98F4B;
+$mobile: '768px';
+
+h1 {
+  font: 700 42px/52px $header-font;
+}
+
+h2 {
+  font: 700 36px/46px $header-font;
+
+  @media screen and (max-width: $mobile) {
+    font: 700 30px/38px $header-font;
+  }
+}
+
+h3 {
+  font: 400 26px/36px $base-font;
+
+  @media screen and (max-width: $mobile) {
+    font: 400 20px/28px $base-font;
+  }
+}
+
+h3.bold {
+  font: 700 26px/36px $base-font;
+
+  @media screen and (max-width: $mobile) {
+    font: 700 20px/28px $base-font;
+  }
+}
+
+p {
+  font: 400 18px/30px $base-font;
+
+  @media screen and (max-width: $mobile) {
+    font: 400 14px/24px $base-font;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.bold{
+  font-weight: 700;
+}
+.position-inital{
+  position: initial;
+}
+.btn-primary {
+  background-color: $gold;
+  color: $white;
+  font: 700 18px/24px $base-font;
+  padding: 16px 32px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border: solid 1px $gold;
+
+  &:hover {
+    border: solid 1px $white;
+    box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  @media screen and (max-width: $mobile) {
+    font: 700 14px/20px $base-font;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $white;
+  font: 700 18px/24px $base-font;
+  padding: 16px 32px ;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border: solid 1px $white;
+  width: fit-content;
+
+  @media screen and (max-width: $mobile) {
+    font: 700 14px/20px $base-font;
+
+  }
+
+  &:hover {
+    border: solid 1px $gold;
+    box-shadow: 0 0 16px 0 rgba(169, 143, 75, 0.8);
+  }
+}
+
+@mixin color($color) {
+  color: $color;
+}
+
+.color-grey-dark {
+  @include color($grey-dark);
+}
+
+.color-grey-light {
+  @include color($grey-light);
+}
+
+.color-white {
+  @include color($white);
+}
+
+.color-gold {
+  @include color($gold);
+}
+
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+.background-color-black {
+  @include background-color($black);
+}
+
+.background-color-grey-dark {
+  @include background-color($grey-dark);
+} 
+
+.background-color-grey-light {
+  @include background-color($grey-light);
+} 
+
+.background-color-white {
+  @include background-color($white);
+} 
+
+.background-color-gold {
+  @include background-color($gold);
+}
+.mt-mob-32{
+  @media (max-width: $mobile){
+    margin-top: 32px;
+    
+  }
+}
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mt-60{
+  margin-top: 60px;
+  @media screen and (max-width: $mobile){
+    margin-top: 24px;
+    
+  }
+}

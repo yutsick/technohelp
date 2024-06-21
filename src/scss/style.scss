@@ -1,5 +1,170 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import 'constants.scss';
 @import 'navbar.scss';
 @import 'footer.scss';
+@import 'slick.scss';
 
 
+body {
+  background-color: $black;
+}
+
+section{
+  padding: 40px 0;
+  @media (max-width: $mobile){
+    padding: 24px 0;
+    
+  }
+}
+
+
+.hero{
+  &__text{
+    margin-top: -120px;
+    @media (min-width: $mobile){
+      margin-top: 0;
+      position: absolute;
+      
+    }
+  }
+}
+
+.buttons {
+  &>*{
+    @media (max-width: $mobile){
+      width: 100%;
+    }
+  }
+}
+.service__item {
+
+  &-text{
+    padding-left: 40px;
+    top:25px;
+    bottom:0;
+    height: calc(100% - 40px);
+  }
+}
+section.more{
+  .social-icons{
+    justify-content: flex-end;
+    a{
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+    }
+  }
+}
+//page products
+.service{
+  &__items-wrapper{
+    padding: 40px;
+  border-radius: 24px;
+  }
+  &-item{
+    border-bottom: solid 1px white;
+    .price{
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+  
+
+}
+
+.value{
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+  }
+}
+
+//slick slider
+.slick-track{
+  gap:16px;
+}
+
+.slick-list{padding:0 5% 0 0 !important;}
+
+.slider-items{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slick-track
+{
+  display: flex !important;
+  height: 280px !important;
+}
+.slider-gallery{
+  .slick-track
+{
+ 
+  height: 570px !important;
+}
+}
+.slick-slide, .slick-slide>div
+{
+  height: inherit!important;
+}
+
+//end of slick slider
+
+.testimonial{
+  &__item{ 
+    padding: 40px;
+    border-radius: 24px;
+    height: 280px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+//products page
+
+.products-hero-cta{
+  margin: -20px auto 0;
+  position: relative;
+width: fit-content;
+
+  
+}
+
+// job page
+.vac-item{
+  &__wrapper{
+    color: $grey-dark;
+  }
+  &__title{
+    font: 700 18px/30px $base-font;
+    margin-top: 24px;
+  }
+  &__section-block{
+    margin-top: 24px;
+  }
+  &__list{
+    margin-top: 8px;
+    font: 400 18px/30px $base-font;
+    li{
+      margin-top: 8px;
+    }
+  }
+}
+
+//contact page
+section.contacts{
+  .mt-mob-0{
+    @media (max-width: $mobile){
+      margin-top: 0;
+      
+    }
+  }
+  .contact-item{
+  margin-top: 32px;
+  &:first-child{
+    margin-top: 0;
+  }
+}
+}

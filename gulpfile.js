@@ -4,13 +4,14 @@ let source_folder = "src";
 //let wp_folder = "../css/";
 
 let path = {
+
   build: {
     html: project_folder + "/",
     css: project_folder + "/css/",
 //    wp_css: wp_folder,
     js: project_folder + "/js/",
     img: project_folder + "/img/",
-    fonts: project_folder + "/fonts/"
+    fonts: project_folder + "/fonts/",
   },
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -38,7 +39,37 @@ let { src, dest } = require('gulp'),
   clean_css = require('gulp-clean-css'),
   rename = require('gulp-rename'),// rename files to .min version
   uglify_js = require('gulp-uglify-es').default;
+  const concat = require('gulp-concat');
+  const uglify = require('gulp-uglify');
+  const sourcemaps = require('gulp-sourcemaps');
 
+  function css() {
+    return src(path.src.css)
+      .pipe(sourcemaps.init()) // Initialize sourcemaps
+      .pipe(
+        scss({
+          outputStyle: "expanded"
+        })
+      )
+      .pipe(autoprefixer({
+        overrideBrowserslist: ['last 5 versions'],
+        cascade: true
+      }))
+      .pipe(
+        group_media()
+      )
+      .pipe(clean_css())
+      .pipe(
+        rename({
+          extname: ".min.css"
+        })
+      )
+      .pipe(sourcemaps.write('.')) // Write sourcemaps to the same directory
+      .pipe(dest(path.build.css))
+      .pipe(browsersync.stream());
+  }
+
+  
 function browserSync(params) {
   browsersync.init({
     server: {
@@ -110,8 +141,12 @@ function watchFiles(params) {
   gulp.watch([path.watch.img], img);
 }
 
+
+
+
 let build = gulp.series(gulp.parallel(js, html, css, img));
 let watch = gulp.parallel(build, browserSync, watchFiles);
+
 
 exports.js = js;
 exports.html = html;
